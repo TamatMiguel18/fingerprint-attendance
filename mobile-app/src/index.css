@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-parish-light: #faf7f2;
+  --color-parish-muted: #ede3d0;
+  --color-parish: #8b4513;
+  --color-parish-dark: #5c2e0b;
+  --color-accent: #d4af37;
+  --color-accent-dark: #a08020;
+  --color-surface: #ffffff;
+  --color-text-muted: #9ca3af;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--color-parish-light);
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents iOS zoom on input focus */
+  }
+}
+
+@layer components {
+  .mobile-card {
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .mobile-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background-color: #f9fafb;
+    border: 1.5px solid transparent;
+    border-radius: 0.875rem;
+    font-size: 1rem;
+    color: #1f2937;
+    transition: all 0.2s;
+    outline: none;
+  }
+  .mobile-input:focus {
+    border-color: #8b4513;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+  }
+  .btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: #8b4513;
+    color: white;
+    border-radius: 0.875rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+    background-color: #5c2e0b;
+  }
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .btn-secondary {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: #8b4513;
+    border-radius: 0.875rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 2px solid rgba(139, 69, 19, 0.25);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-secondary:active {
+    transform: scale(0.98);
+    background-color: rgba(139, 69, 19, 0.05);
+  }
+  .btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

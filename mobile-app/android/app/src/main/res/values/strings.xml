@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AsistenciaParroquia</string>
+    <string name="title_activity_main">AsistenciaParroquia</string>
+    <string name="package_name">com.parroquia.asistencia</string>
+    <string name="custom_url_scheme">com.parroquia.asistencia</string>
+</resources>
